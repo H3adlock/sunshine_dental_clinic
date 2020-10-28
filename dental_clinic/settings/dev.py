@@ -30,7 +30,7 @@ DEBUG_TOOLBAR_PANELS = [
 
 
 def show_toolbar(request):
-    return False
+    return True
 
 
 DEBUG_TOOLBAR_CONFIG = {
