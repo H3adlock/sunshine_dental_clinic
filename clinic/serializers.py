@@ -12,6 +12,7 @@ class PatientSerializer(serializers.ModelSerializer):
     class Meta:
         model = Patient
         fields = '__all__'
+        depth = 1
 
 
 class AppointmentSerializer(serializers.ModelSerializer):
@@ -26,3 +27,4 @@ class PatientAppointmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Patient
         fields = ('id', 'name', 'age', 'address', 'occupation', 'contact', 'medical_histories', 'appointment_patient')
+        depth = 1

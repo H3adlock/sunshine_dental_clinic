@@ -27,3 +27,8 @@ class PatientAppointmentSerializerListView(generics.ListAPIView):
     queryset = Patient.objects.all()
     serializer_class = PatientAppointmentSerializer
     permission_classes = (IsAdminOrReadOnly,)
+
+class PatientAppointmentSerializerUpdateView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Patient.objects.all()
+    serializer_class = PatientAppointmentSerializer
+    permission_classes = (IsAdminOrReadOnly,)
